@@ -14,17 +14,11 @@
 
 .content-header {
 
-    .content-app-name, .content-header-span  {
+    .content-app-name {
         color: $info-color;
         font-family: 'Luckiest Guy', cursive;
         font-weight: 100;
-    }
 
-    .content-header-span {
-        display: inline-block;
-        margin-top: 1rem;
-        font-size: 1.7rem;
-        letter-spacing: 0.2rem;
+        text-shadow: 0.1rem 0.1rem rgba(255, 255, 255, 0.4);
     }
-
 }

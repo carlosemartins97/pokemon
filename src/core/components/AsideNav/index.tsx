@@ -10,7 +10,7 @@ const AsideNav: React.FC = () => {
     return (
         <div className="aside-container">
             <a href="/" className="aside-logo">
-                <img src={pokeballImg} alt=""/>
+                <img src={pokeballImg} alt="Pokebola"/>
             </a>
 
             <ul className="aside-nav">

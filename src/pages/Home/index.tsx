@@ -1,5 +1,6 @@
 import React from 'react';
 import AsideNav from '../../core/components/AsideNav';
+import ItemCarousel from '../../core/components/ItemCarousel';
 
 import './styles.scss';
 
@@ -12,8 +13,11 @@ const Home: React.FC = () => {
                     <header className="content-header">
                         <h1>Bem vindo(a) ao <span className="content-app-name">LOCALIZAMON</span></h1>
                         <p>Aqui você poderá navegar pelos tipos de pokemons e conhecer mais sobre cada um deles.</p>
-                        <span className="content-header-span">Divirta-se!</span>
                     </header>
+
+                    <main className="content-main">
+                        <ItemCarousel />
+                    </main>
                 </div>
             </div>
         </div>
