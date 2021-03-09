@@ -1,0 +1,14 @@
+@import '../../core/styles/variables.scss';
+
+.container {
+    display: flex;
+    
+    height: 100vh;
+
+    .wrapper-content{
+        color: #fff;
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+}
