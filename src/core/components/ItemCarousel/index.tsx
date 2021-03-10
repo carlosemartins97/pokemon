@@ -20,6 +20,7 @@ import 'swiper/components/navigation/navigation.scss';
 SwiperCore.use([Navigation, A11y]);
 
 const ItemCarousel: React.FC = () => {
+
     return (
         <div className="container-carousel">
             <h2>tipos</h2>

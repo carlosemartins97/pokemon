@@ -2,6 +2,8 @@ import React from 'react';
 import AsideNav from '../../core/components/AsideNav';
 import ItemCarousel from '../../core/components/ItemCarousel';
 
+import ShowStats from '../../core/components/ShowStats';
+
 import './styles.scss';
 
 const Home: React.FC = () => {
@@ -19,6 +21,7 @@ const Home: React.FC = () => {
                         <ItemCarousel />
                     </main>
                 </div>
+                <ShowStats />
             </div>
         </div>
     )
