@@ -2,8 +2,6 @@ import React from 'react';
 
 import './styles.scss';
 
-import pikachu from '../../assets/pikachu.png';
-
 interface ShowStatsProps {
     pokemon?: {
         data: {

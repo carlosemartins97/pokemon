@@ -17,6 +17,44 @@
 }
 
 .swiper-container {
-    max-width: 1080px;
-    float: left;
+    max-width: 67.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3rem;
+}
+
+.btn-types {
+    border-style: none;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px -6px rgba(0,0,0,0.75);
+    
+    text-transform: uppercase;
+    font-weight: 500;
+
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.5rem;
+    text-shadow: 0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+    
+    color: $info-color;
+
+    transition: 250ms all;
+    
+
+    cursor: pointer;
+
+    padding: 1rem 0;
+
+    &:nth-child(2n + 1){
+        background: $info-color;
+        color: $text-color;
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
+    
+    
 }

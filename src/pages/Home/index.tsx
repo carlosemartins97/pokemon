@@ -30,14 +30,27 @@ interface Pokemon {
     }
 }
 
+interface Type {
+    data: {
+        results: {
+            name: string;
+        }[]
+    }
+}
+
 function Home() {
     const [poke, setPoke] = useState<Pokemon>();
+    const [pokeType, setPokeType] = useState<Type>();
 
     useEffect(() => {
         axios.get('https://pokeapi.co/api/v2/pokemon/25')
             .then(data => {
-                console.log(data);
                 setPoke(data);
+            })
+
+        axios.get('https://pokeapi.co/api/v2/type')
+            .then(data => {
+                setPokeType(data);
             })
     },[])
 
@@ -53,7 +66,7 @@ function Home() {
                     </header>
 
                     <main className="content-main">
-                        <ItemCarousel />
+                        <ItemCarousel types={pokeType}/>
                     </main>
                 </div>
 
@@ -65,34 +78,3 @@ function Home() {
 }
 
 export default Home;
-
-{/* <h2>{poke?.data.base_experience} 
-                        
-<br/>
-
-{poke?.data.abilities.map(item => {
-    return (
-        <p key={item.ability.name}> {item.ability.name} </p>
-    )
-})}
-
-<br/>
-{poke?.data.name}
-
-<br/>
-{poke?.data.id}
-<br/>
-<img src={poke?.data.sprites.front_default} alt=""/>
-<br/>
-
-{poke?.data.weight}
-<br/>
-
-{poke?.data.types.map(ty => {
-    return (
-        <p key={ty.type.name}>{ty.type.name}</p>
-    )
-})}
-
-
-</h2> */}
