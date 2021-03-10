@@ -1,12 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import axios from 'axios';
+
 import AsideNav from '../../core/components/AsideNav';
 import ItemCarousel from '../../core/components/ItemCarousel';
-
 import ShowStats from '../../core/components/ShowStats';
 
 import './styles.scss';
 
-const Home: React.FC = () => {
+interface Pokemon {
+    data: {
+        id: number;
+        name: string;
+        base_experience: number;
+        abilities: {
+            ability: {
+                name: string;
+            }
+        }[];
+        sprites: {
+            front_default: string;
+        }
+        weight: number;
+        types: {
+            type: {
+                name: string;
+            }
+        }[]
+    }
+}
+
+function Home() {
+    const [poke, setPoke] = useState<Pokemon>();
+
+    useEffect(() => {
+        axios.get('https://pokeapi.co/api/v2/pokemon/25')
+            .then(data => {
+                console.log(data);
+                setPoke(data);
+            })
+    },[])
+
+
     return(
         <div className="container">
             <AsideNav />
@@ -21,10 +56,43 @@ const Home: React.FC = () => {
                         <ItemCarousel />
                     </main>
                 </div>
-                <ShowStats />
+
+                
+                <ShowStats pokemon={poke}/>
             </div>
         </div>
     )
 }
 
 export default Home;
+
+{/* <h2>{poke?.data.base_experience} 
+                        
+<br/>
+
+{poke?.data.abilities.map(item => {
+    return (
+        <p key={item.ability.name}> {item.ability.name} </p>
+    )
+})}
+
+<br/>
+{poke?.data.name}
+
+<br/>
+{poke?.data.id}
+<br/>
+<img src={poke?.data.sprites.front_default} alt=""/>
+<br/>
+
+{poke?.data.weight}
+<br/>
+
+{poke?.data.types.map(ty => {
+    return (
+        <p key={ty.type.name}>{ty.type.name}</p>
+    )
+})}
+
+
+</h2> */}
