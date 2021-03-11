@@ -7,6 +7,7 @@ import ItemCarousel from '../../core/components/ItemCarousel';
 import ShowStats from '../../core/components/ShowStats';
 
 import './styles.scss';
+import Pokemons from '../../core/components/Pokemons';
 
 interface Pokemon {
     data: {
@@ -67,6 +68,7 @@ function Home() {
 
                     <main className="content-main">
                         <ItemCarousel types={pokeType}/>
+                        <Pokemons />
                     </main>
                 </div>
 
