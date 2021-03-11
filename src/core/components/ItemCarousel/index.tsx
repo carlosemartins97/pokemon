@@ -1,31 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ItemCarouselContext } from '../../contexts/ItemCarouselContext';
 
 import './styles.scss';
 
-interface Type {
-    types?: {
-        data: {
-            results: {
-                name: string;
-            }[]
-        }
-    }
-}
+function ItemCarousel(){
 
-
-function ItemCarousel(props: Type){
+    const { pokeType, handleTypeClick } = useContext(ItemCarouselContext);
 
     return (
         <div className="container-carousel">
             <h2>tipos</h2>
 
             <div className="swiper-container">
-            {props.types?.data.results.map(type => {
+            {pokeType?.data.results.map(type => {
                         return (
                             <button 
                                 type="button"
                                 key={type.name}
-                                className="btn-types"    
+                                className="btn-types"  
+                                onClick={handleTypeClick}  
                             >
                                 {type.name}
                             </button>

@@ -31,17 +31,10 @@ interface Pokemon {
     }
 }
 
-interface Type {
-    data: {
-        results: {
-            name: string;
-        }[]
-    }
-}
+
 
 function Home() {
     const [poke, setPoke] = useState<Pokemon>();
-    const [pokeType, setPokeType] = useState<Type>();
 
     useEffect(() => {
         axios.get('https://pokeapi.co/api/v2/pokemon/25')
@@ -49,10 +42,10 @@ function Home() {
                 setPoke(data);
             })
 
-        axios.get('https://pokeapi.co/api/v2/type')
-            .then(data => {
-                setPokeType(data);
-            })
+        // axios.get('https://pokeapi.co/api/v2/type')
+        //     .then(data => {
+        //         setPokeType(data);
+        //     })
     },[])
 
 
@@ -67,7 +60,7 @@ function Home() {
                     </header>
 
                     <main className="content-main">
-                        <ItemCarousel types={pokeType}/>
+                        <ItemCarousel/>
                         <Pokemons />
                     </main>
                 </div>

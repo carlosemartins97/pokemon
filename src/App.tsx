@@ -1,9 +1,13 @@
 import React from 'react';
+import ItemCarouselProvider from './core/contexts/ItemCarouselContext';
 import Home from './pages/Home';
 
 function App() {
   return (
-    <Home />
+    <ItemCarouselProvider>
+      <Home />
+    </ItemCarouselProvider>
+    
   );
 }
 
