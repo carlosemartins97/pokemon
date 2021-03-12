@@ -2,7 +2,7 @@ import React, {createContext, ReactNode, useEffect, useState} from 'react';
 import axios from 'axios';
 
 interface ItemCarouselContextData {
-    pokeType?: Type;
+    pokeType?: PokeType;
     handleTypeClick: (name: string) => void;
     fewPokes?: FewPokes; 
 }
@@ -11,7 +11,7 @@ interface ItemCarouselProviderProps {
     children: ReactNode;
 }
 
-interface Type {
+interface PokeType {
     data: {
         results: {
             name: string;
@@ -33,7 +33,7 @@ interface FewPokes {
 export const ItemCarouselContext = createContext({} as ItemCarouselContextData);
 
 function ItemCarouselProvider({children}: ItemCarouselProviderProps){
-    const [pokeType, setPokeType] = useState<Type>();
+    const [pokeType, setPokeType] = useState<PokeType>();
     const [fewPokes, setFewPokes] = useState<FewPokes>();
 
     useEffect(() => {

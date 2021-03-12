@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { ItemCarouselContext } from '../../contexts/ItemCarouselContext';
+
+import { PokemonsContext } from '../../contexts/PokemonsContext';
 
 import './styles.scss';
 
 function Pokemons(){
 
-    const { fewPokes } = useContext(ItemCarouselContext);
+    const { fewPokes } = useContext(PokemonsContext);
 
 
     return (
