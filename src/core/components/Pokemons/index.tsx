@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ItemCarouselContext } from '../../contexts/ItemCarouselContext';
 
 import './styles.scss';
 
 function Pokemons(){
+
+    const { fewPokes } = useContext(ItemCarouselContext);
+
+
     return (
         <div className="container-pokemons">
             <h2>Pokemons</h2>
 
             <ul className="content-pokemons">
-                <li>Pikachu</li>
-                <li>Pikachu</li>
-                <li>Pikachu</li>
-                <li>Pikachu</li>
-                <li>Pikachu</li>
+                {fewPokes?.data.pokemon.map(item => {
+                    return (
+                        <li key={item.pokemon.name}>{item.pokemon.name}</li>
+                    )
+                })}
+
             </ul>
         </div>
     )

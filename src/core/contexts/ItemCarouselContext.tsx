@@ -3,7 +3,7 @@ import axios from 'axios';
 
 interface ItemCarouselContextData {
     pokeType?: Type;
-    handleTypeClick: () => void;
+    handleTypeClick: (name: string) => void;
     fewPokes?: FewPokes; 
 }
 
@@ -24,7 +24,7 @@ interface FewPokes {
         pokemon: {
             pokemon: {
                 name: string;
-            }[]
+            }
         }[]
     }
 }
@@ -43,8 +43,8 @@ function ItemCarouselProvider({children}: ItemCarouselProviderProps){
             })
     },[])
 
-    function handleTypeClick(){
-        axios.get('https://pokeapi.co/api/v2/type/dark')
+    function handleTypeClick(name: string){
+        axios.get(`https://pokeapi.co/api/v2/type/${name}`)
             .then(data => {
                 setFewPokes(data);
             })

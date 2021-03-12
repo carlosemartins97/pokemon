@@ -18,7 +18,7 @@ function ItemCarousel(){
                                 type="button"
                                 key={type.name}
                                 className="btn-types"  
-                                onClick={handleTypeClick}  
+                                onClick={() => handleTypeClick(`${type.name}`)}  
                             >
                                 {type.name}
                             </button>
