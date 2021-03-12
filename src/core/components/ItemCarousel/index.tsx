@@ -12,7 +12,9 @@ function ItemCarousel(){
             <h2>tipos</h2>
 
             <div className="swiper-container">
-            {pokeType?.data.results.map(type => {
+            {pokeType?.data.results.map((type, index) => {
+                        type.name === 'unknown' && pokeType.data.results.splice(index, 2) //remove type 'unknown' and type 'shadow' that doesn't have any pokemon.
+                            
                         return (
                             <button 
                                 type="button"

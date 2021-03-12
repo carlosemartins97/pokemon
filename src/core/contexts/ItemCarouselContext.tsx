@@ -40,8 +40,14 @@ function ItemCarouselProvider({children}: ItemCarouselProviderProps){
         axios.get('https://pokeapi.co/api/v2/type')
             .then(data => {
                 setPokeType(data);
+                !fewPokes && (
+                    axios.get('https://pokeapi.co/api/v2/type/normal')
+                        .then(data => {
+                            setFewPokes(data);
+                        })
+                )
             })
-    },[])
+    },[fewPokes])
 
     function handleTypeClick(name: string){
         axios.get(`https://pokeapi.co/api/v2/type/${name}`)
@@ -53,7 +59,11 @@ function ItemCarouselProvider({children}: ItemCarouselProviderProps){
 
 
     return (
-        <ItemCarouselContext.Provider value={{pokeType, handleTypeClick, fewPokes}}>
+        <ItemCarouselContext.Provider value={{
+            pokeType, 
+            handleTypeClick, 
+            fewPokes,
+            }}>
             {children}
         </ItemCarouselContext.Provider>
     )
