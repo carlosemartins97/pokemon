@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-
-import axios from 'axios';
+import React from 'react';
 
 import AsideNav from '../../core/components/AsideNav';
 import ItemCarousel from '../../core/components/ItemCarousel';
@@ -9,46 +7,7 @@ import ShowStats from '../../core/components/ShowStats';
 import './styles.scss';
 import Pokemons from '../../core/components/Pokemons';
 
-interface Pokemon {
-    data: {
-        id: number;
-        name: string;
-        base_experience: number;
-        abilities: {
-            ability: {
-                name: string;
-            }
-        }[];
-        sprites: {
-            front_default: string;
-        }
-        weight: number;
-        types: {
-            type: {
-                name: string;
-            }
-        }[]
-    }
-}
-
-
-
 function Home() {
-    const [poke, setPoke] = useState<Pokemon>();
-
-    useEffect(() => {
-        axios.get('https://pokeapi.co/api/v2/pokemon/25')
-            .then(data => {
-                setPoke(data);
-            })
-
-        // axios.get('https://pokeapi.co/api/v2/type')
-        //     .then(data => {
-        //         setPokeType(data);
-        //     })
-    },[])
-
-
     return(
         <div className="container">
             <AsideNav />
@@ -66,7 +25,7 @@ function Home() {
                 </div>
 
                 
-                <ShowStats pokemon={poke}/>
+                <ShowStats/>
             </div>
         </div>
     )

@@ -6,7 +6,8 @@ import './styles.scss';
 
 function Pokemons(){
 
-    const { fewPokes } = useContext(PokemonsContext);
+    const { fewPokes, handlePokemonClick } = useContext(PokemonsContext);
+
 
 
     return (
@@ -16,7 +17,9 @@ function Pokemons(){
             <ul className="content-pokemons">
                 {fewPokes?.data.pokemon.map(item => {
                     return (
-                        <li key={item.pokemon.name}>{item.pokemon.name}</li>
+                        <li key={item.pokemon.name}
+                            onClick={() => handlePokemonClick(`${item.pokemon.name}`)}
+                        >{item.pokemon.name}</li>
                     )
                 })}
 
