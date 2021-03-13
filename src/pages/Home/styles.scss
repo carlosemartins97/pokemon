@@ -4,6 +4,8 @@
     display: flex;
     
     height: 100vh;
+
+
 }
 
 .wrapper-content{
@@ -23,5 +25,21 @@
         font-weight: 100;
 
         text-shadow: 0.1rem 0.1rem rgba(255, 255, 255, 0.4);
+    }
+}
+
+.content-main {
+    width: 100%;
+    max-width: 56.25rem;
+    >h2 {
+        font-family: 'Luckiest Guy', cursive;
+        font-weight: 100;
+        text-shadow: 0.1rem 0.1rem rgba(255, 255, 255, 0.7);
+        letter-spacing: 0.2rem;
+
+        color: $info-color;
+
+        margin-top: 3rem;
+        
     }
 }

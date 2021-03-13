@@ -61,7 +61,7 @@ function PokemonsProvider({children}: PokemonsProviderProps){
         <PokemonsContext.Provider value={{
             fewPokes,
             handlePokemonClick,
-            poke
+            poke,
 
             }}>
 

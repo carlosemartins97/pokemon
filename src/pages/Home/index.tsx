@@ -20,6 +20,7 @@ function Home() {
 
                     <main className="content-main">
                         <ItemCarousel/>
+                        <h2>Pokemons</h2>
                         <Pokemons />
                     </main>
                 </div>
