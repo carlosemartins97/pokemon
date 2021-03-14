@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+<div align="center" id="top"> 
+   :rocket: <a href="http://localizamon.netlify.app/">Demo</a>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Localizamon</h1>
 
-## Available Scripts
+<!-- Status -->
 
-In the project directory, you can run:
+<!-- <h4 align="center"> 
+	🚧  {{app_name}} 🚀 Under construction...  🚧
+</h4> 
 
-### `yarn start`
+<hr> -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+  <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0; 
+  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
+  <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-requerimentos">Requerimentos</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-começando">Começando</a> &#xa0; | &#xa0;
+  <a href="#memo-licença">Licença</a> &#xa0; | &#xa0;
+  <a href="https://github.com/carlosemartins97" target="_blank">Autor</a>
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br>
 
-### `yarn test`
+## :dart: Sobre ##
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O Localizamon é uma dashboard que utiliza a Poke API para fazer requisições e trazer dados de acordo com a navegação do usuário, com o intuito de mostrar informações aprofundadas de cada pokemon diferente.
 
-### `yarn build`
+## :sparkles: Features ##
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+:heavy_check_mark: Pesquisar Pokemons por tipo\
+:heavy_check_mark: Pesquisar Pokemons por nome;\
+:heavy_check_mark: Visualização de dados sobre cada pokemon;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :rocket: Tecnologias ##
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As seguintes tecnologias foram utilizadas no projeto:
 
-### `yarn eject`
+- [React](https://pt-br.reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## :white_check_mark: Requerimentos ##
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Antes de começar :checkered_flag:, vvocê precisa ter [Git](https://git-scm.com) e [Node](https://nodejs.org/en/) instalados.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## :checkered_flag: Começando ##
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+# Clone this project
+$ git clone https://github.com/carlosemartins97/pokemon
 
-## Learn More
+# Access
+$ cd pokemon
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Install dependencies
+$ yarn
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Run the project
+$ yarn start
+
+# The server will initialize in the <http://localhost:3000>
+```
+
+## :memo: Licença ##
+
+This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+
+
+Feito com :heart: por <a href="https://github.com/carlosemartins97" target="_blank">Carlos Eduardo Martins</a>
+
+&#xa0;
+
+<a href="#top">Back to top</a>
