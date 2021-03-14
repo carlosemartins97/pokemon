@@ -31,7 +31,7 @@ O Localizamon é uma dashboard que utiliza a Poke API para fazer requisições e
 ## :sparkles: Features ##
 
 :heavy_check_mark: Pesquisar Pokemons por tipo\
-:heavy_check_mark: Pesquisar Pokemons por nome;\
+:heavy_check_mark: Pesquisar Pokemons por nome (ainda será implementado);\
 :heavy_check_mark: Visualização de dados sobre cada pokemon;
 
 ## :rocket: Tecnologias ##
